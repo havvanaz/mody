@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../main.dart' show AppColors;
-import '../../core/constants/app_images.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_images.dart';
 import '../widgets/settings_widgets.dart';
 
 class GaragePage extends StatelessWidget {
@@ -15,9 +15,6 @@ class GaragePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Üst Header
-              _buildHeader(context),
-
               // Profil Bilgileri Bölümü
               _buildProfileSection(context),
 
@@ -31,70 +28,6 @@ class GaragePage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildHeader(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      child: Row(
-        children: [
-          // Mody AI Logo
-          Row(
-            children: [
-              const Icon(Icons.directions_car, color: Colors.white, size: 24),
-              const SizedBox(width: 8),
-              const Text(
-                'Mody AI',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-
-          const Spacer(),
-
-          // GET PRO Butonu
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Icon(Icons.star, color: Colors.white, size: 16),
-                const SizedBox(width: 4),
-                const Text(
-                  'GET PRO',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(width: 16),
-
-          // Ayarlar İkonu
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SettingsPage()),
-              );
-            },
-            icon: const Icon(Icons.settings, color: Colors.white, size: 24),
-          ),
-        ],
       ),
     );
   }
@@ -124,13 +57,33 @@ class GaragePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'ModShopMarcus',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+                Row(
+                  children: [
+                    const Text(
+                      'ModShopMarcus',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SettingsPage(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.settings,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 8),
                 Row(

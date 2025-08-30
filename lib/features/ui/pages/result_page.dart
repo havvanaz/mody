@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../main.dart' show AppColors;
+import '../../../core/constants/app_colors.dart';
 
 class ResultPage extends StatefulWidget {
   const ResultPage({super.key});

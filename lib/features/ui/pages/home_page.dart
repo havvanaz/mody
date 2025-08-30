@@ -4,8 +4,8 @@ import 'analyze_page.dart';
 import 'trending_page.dart';
 import 'market_page.dart';
 import 'garage_page.dart';
-import '../../main.dart' show AppColors;
-import '../../core/constants/app_images.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_images.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../main.dart' show AppColors;
+import '../../../core/constants/app_colors.dart';
 import '../widgets/market_widgets.dart';
-import '../../core/constants/app_images.dart';
+import '../../../core/constants/app_images.dart';
 
 class MarketPage extends StatelessWidget {
   const MarketPage({super.key});

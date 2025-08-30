@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../main.dart' show AppColors;
-import '../../core/constants/app_images.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_images.dart';
 
 class AnalyzePage extends StatelessWidget {
   const AnalyzePage({super.key});
@@ -30,14 +30,17 @@ class AnalyzePage extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Wrap(
-          spacing: 8,
-          runSpacing: -8,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             _Badge('Brand: —'),
+            SizedBox(height: 8),
             _Badge('Model: —'),
+            SizedBox(height: 8),
             _Badge('Year: —'),
+            SizedBox(height: 8),
             _Badge('Color: —'),
+            SizedBox(height: 8),
             _Badge('Confidence: 87%'),
           ],
         ),

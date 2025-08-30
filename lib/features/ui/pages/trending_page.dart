@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../main.dart' show AppColors;
-import '../../core/constants/app_images.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_images.dart';
 
 class TrendingPage extends StatelessWidget {
   const TrendingPage({super.key});

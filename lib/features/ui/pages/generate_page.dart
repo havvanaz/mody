@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../../main.dart' show AppColors;
+import '../../../core/constants/app_colors.dart';
 import 'result_page.dart';
 import '../widgets/generate_widgets.dart';
 
